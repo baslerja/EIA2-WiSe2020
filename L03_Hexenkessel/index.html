@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L03_Hexenkessel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>HEXENKESSEL</h1>
+        <p>Choose a potion and the extras. Select name, description, effects and more. Check out your recipe on the
+            right.</p>
+    </header>
+
+    <form>
+        <div id="form">
+            <fieldset>
+                <legend>Name potion</legend>
+                <input type="text" name="potion" id="potion">
+            </fieldset>
+
+            <fieldset>
+                <legend>Description, risks and side effects</legend>
+                <textarea id="descript" name="descript" rows="4" cols="50"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Effect</legend>
+                <select name="effect" id="effect">
+                    <option value="empty" id="empty">Choose...</option>
+                    <option value="strengh" id="strengh" price="10">Strengh</option>
+                    <option value="wisdom" id="wisdom" price="15">Wisdom</option>
+                    <option value="speed" id="speed" price="20">Speed</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Duration</legend>
+                <span id="timeSlider">
+                    <span>
+                        10 min
+                        <input type="range" name="time" id="time" min="10" max="60" step="10" value="10">
+                        60 min
+                    </span>
+                </span>
+            </fieldset>
+
+            <fieldset>
+                <legend>Ingredients</legend>
+                <input type="checkbox"  id="dragon" name="ingredient" value="Drachenschuppe" price="20">
+                <label for="dragon">Drachenschuppe</label>
+                <input type="text" id="amountDragon" name="amountDragon">Stk<br>
+
+                <input type="checkbox" id="witch" name="ingredient" value="Hexenkraut" price="15">
+                <label for="witch">Hexenkraut</label>
+                <input type="text" id="amountWitch" name="amountWitch">Stk<br>
+
+                <input type="checkbox" id="raven" name="ingredient" value="Rabenfeder" price="18">
+                <label for="raven">Rabenfeder</label>
+                <input type="text" id="amountRaven" name="amountRaven">Stk<br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Temperature</legend>
+                <input type="number" id="temperature" name="temperature" min="-10" max="100">
+            </fieldset>
+
+            <fieldset>
+                <legend>Stir</legend>
+                <span id="stirSlider">
+                    <span>
+                        slow
+                        <input type="range" name="stir" id="stir" min="1" max="10" step="1" value="1">
+                        fast
+                    </span>
+                </span>
+            </fieldset>
+
+            <fieldset>
+                <legend>Consistency</legend>
+                <input type="radio" name="consistency" id="liquid" value="liquid" price="2">
+                <label for="liquid">liquid</label><br>
+                <input type="radio" name="consistency" id="medium" value="medium" price="1">
+                <label for="medium">medium</label><br>
+                <input type="radio" name="consistency" id="tough" value="tough" price="3">
+                <label for="tough">tough</label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Color</legend>
+                <input type="color" name="color" id="color">
+            </fieldset>
+        </div>
+    </form>
+
+    <div id="recipe">
+        <h2>Your recipe</h2>
+        <div id="display"></div>
+    </div>
+
+</body>
+
+</html>
