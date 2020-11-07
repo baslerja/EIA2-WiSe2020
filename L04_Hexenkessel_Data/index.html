@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L04_Hexenkessel:Data</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+    <script src="generateContent.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>HEXENKESSEL</h1>
+        <p>Choose a potion and the extras. Select name, description, effects and more. Check out your recipe on the
+            right.</p>
+    </header>
+
+    <form>
+        <div id="form">
+            <fieldset>
+                <legend>Name potion</legend>
+                <input type="text" name="potion" id="potion">
+            </fieldset>
+
+            <fieldset>
+                <legend>Description, risks and side effects</legend>
+                <textarea id="descript" name="descript" rows="4" cols="50"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Effect</legend>
+                <select name="effect" id="effect">
+                    <option value="Empty" id="empty">Choose...</option>
+                    <option value="Strengh" id="strengh" knut="10">Strengh</option>
+                    <option value="Wisdom" id="wisdom" knut="15">Wisdom</option>
+                    <option value="Speed" id="speed" knut="20">Speed</option>
+                </select><br>
+                Effect lasts up to
+                <span id="timeSlider">
+                    <span>
+                        0
+                        <input type="range" name="timeEffect" id="time" min="0" max="60" step="10" value="0">
+                        60
+                    </span>
+                </span>
+                minutes
+            </fieldset>
+
+            <fieldset id="Ingredients">
+                <legend>Ingredients</legend>
+                
+                <!--<input type="checkbox" id="fluxweed" name="ingredient" value="Fluxweed" knut="20">
+                <label for="dragon">Fluxweed</label>
+                <input type="number" name="Amount Fluxweed" min="1" max="10" step="1" id="amountFluxweed" value="1"/><br>
+
+                <input type="checkbox" id="boomslang" name="ingredient" value="Boomslang skin" knut="15">
+                <label for="witch">Boomslang skin</label>
+                <input type="number" name="Amount Boomslang" min="1" max="10" step="1" id="amountBoomslang" value="1"/><br>
+
+                <input type="checkbox" id="knotgrass" name="ingredient" value="Knotgrass" knut="18">
+                <label for="raven">Knotgrass</label>
+                <input type="number" name="Amount Knotgrass" min="1" max="10" step="1" id="amountKnotgrass" value="1"/><br>-->
+            </fieldset>
+
+            <fieldset>
+                <legend>Preparation</legend>
+                <label for="heat">
+                    <input type="radio" name="temperature" id="hot" value="hot"/>heat up
+                </label><br>
+
+                <label for="cold">
+                    <input type="radio" name="temperature" id="cold" value="cold"/>cool down
+                </label><br>
+
+                to
+                <label for="temperature">
+                    <input type="number" name="degrees" min="-10" max="100" step="1" id="temperature"/> degrees
+                </label><br>
+
+                Heat up/cool down for
+                <label for="tempTime">
+                    <input type="number" name="tempTime" min="30" max="300" step="30" id="tempTime"/> seconds
+                </label>
+
+                until the potions consistency is
+                <select name="consistencyTemp" id="consistencyTemp">
+                    <option value="liquid" id="liquid">liquid</option>
+                    <option value="medium" id="medium">medium</option>
+                    <option value="tough" id="tough">tough</option>
+                </select>
+
+                and has this 
+                <input type="color" name="colorTemp" id="colorTemp" value="#04B404">
+                color
+            </fieldset>
+
+            <fieldset>
+                <legend>Stir</legend>
+                <label for="slow">
+                    <input type="radio" name="stir" id="slow" value="slow"/>slow
+                </label><br>
+
+                <label for="fast">
+                    <input type="radio" name="stir" id="fast" value="fast"/>fast
+                </label><br>
+
+                Stir for
+                <label for="stirTime">
+                    <input type="number" name="stirTime" min="30" max="300" step="30" id="stirTime"/> seconds
+                </label>
+
+                until the potions consistency is
+                <select name="consistencyStir" id="consistencyStir">
+                    <option value="liquid" id="liquid">liquid</option>
+                    <option value="medium" id="medium">medium</option>
+                    <option value="tough" id="tough">tough</option>
+                </select>
+
+                and has this 
+                <input type="color" name="colorStir" id="colorStir" value="#FF0000">
+                color
+            </fieldset>
+        </div>
+    </form>
+
+    <div id="recipe">
+        <h2>Your recipe</h2>
+        <div id="display"></div>
+    </div>
+
+</body>
+
+</html>
