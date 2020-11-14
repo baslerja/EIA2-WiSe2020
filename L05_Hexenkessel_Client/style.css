@@ -1,0 +1,36 @@
+body{
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: auto auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+header{
+    grid-column: span 3;
+    text-align: center;
+}
+
+fieldset{
+    border: thin solid black;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+div {
+    width: 70%;
+}
+
+h2{
+    text-align: center;
+}
+
+legend{
+    font-weight: bold;
+}
+
+#slider{
+    display: grid;
+    grid-template-columns: auto auto;
+}

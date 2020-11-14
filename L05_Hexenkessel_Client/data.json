@@ -1,0 +1,10 @@
+{
+    "Ingredients": [
+        { "name": "Fluxweed", "price": 20
+        },
+        { "name": "Boomslang skin", "price": 15
+        },
+        { "name": "Knotgrass", "price": 18
+        }
+    ]
+}
